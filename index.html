@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Healthee - Health Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Login Page -->
+  <div class="page" id="loginPage">
+    <div class="video-container">
+      <video autoplay muted loop>
+        <source src="welcome.mp4" type="video/mp4">
+      </video>
+    </div>
+    <h2>Login</h2>
+    <input type="text" placeholder="Username" id="loginUsername">
+    <input type="password" placeholder="Password" id="loginPassword">
+    <button onclick="login()">Login</button>
+    <p>Don't have an account? <a href="#" onclick="showPage('registerPage')">Register here</a></p>
+  </div>
+
+  <!-- Register Page -->
+  <div class="page hidden" id="registerPage">
+    <h2>Register</h2>
+    <input type="text" placeholder="Username" id="registerUsername">
+    <input type="password" placeholder="Password" id="registerPassword">
+    <input type="password" placeholder="Confirm Password" id="registerConfirm">
+    <button onclick="register()">Register</button>
+  </div>
+
+  <!-- Main Page -->
+  <div class="page hidden" id="mainPage">
+    <h2>Health Tracker</h2>
+    <input type="number" placeholder="Sleep Hours" id="sleep">
+    <input type="number" placeholder="Water Intake (litres)" id="water">
+    <input type="number" placeholder="Meals per Day" id="meals">
+    <input type="text" placeholder="Blood Pressure (optional)" id="bp">
+    <select id="activity">
+      <option value="">Physical Activity?</option>
+      <option>Yes</option>
+      <option>No</option>
+    </select>
+    <select id="mood">
+      <option value="">Mood</option>
+      <option>Happy</option>
+      <option>Sad</option>
+      <option>Stressed</option>
+      <option>Okay</option>
+    </select>
+    <button onclick="submitData()">Submit</button>
+    <button onclick="showPage('settingsPage')">Settings</button>
+    <button onclick="showPage('loginPage')">Logout</button>
+  </div>
+
+  <!-- Loading Page -->
+  <div class="page hidden" id="loadingPage">
+    <h2>Processing your data...</h2>
+    <p>Loading AI recommendations...</p>
+  </div>
+
+  <!-- Result Page -->
+  <div class="page hidden" id="resultPage">
+    <h2>Results</h2>
+    <div id="resultContent"></div>
+    <button onclick="showPage('loginPage')">Logout</button>
+  </div>
+
+  <!-- Stretching Page -->
+  <div class="page hidden" id="stretchingPage">
+    <h2>Stretching Tutorial</h2>
+    <video id="stretchVideo" controls>
+      <source src="stretching_damien_hakeem.mp4" type="video/mp4">
+    </video>
+    <br/>
+    <button onclick="downloadVideo()">Download</button>
+    <button onclick="showPage('mainPage')">Back</button>
+  </div>
+
+  <!-- Settings Page -->
+  <div class="page hidden" id="settingsPage">
+    <h2>Settings</h2>
+    <input type="text" placeholder="Change Display Name" id="displayName">
+    <input type="password" placeholder="Change Password" id="newPassword">
+    <button onclick="updateSettings()">Save Changes</button>
+    <button onclick="showPage('mainPage')">Back</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

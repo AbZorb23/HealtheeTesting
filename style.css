@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+.page {
+  display: none;
+}
+.page.active, .page:not(.hidden) {
+  display: block;
+}
+input, select, button {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 80%;
+  max-width: 300px;
+}
+button {
+  cursor: pointer;
+}
+video {
+  max-width: 300px;
+  width: 100%;
+  margin: 10px auto;
+}
