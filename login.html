@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Healthee</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page" id="loginPage" style="display: block;">
+<video autoplay="" controls="" height="240" id="loginVideo" loop="" playsinline="" width="320">
+<source src="welcome.mp4" type="video/mp4"/>
+</video>
+
+<div id="loginContent">
+<h1>Login to Healthee</h1>
+<input id="loginUsername" placeholder="Username" type="text"/>
+<input id="loginPassword" placeholder="Password" type="password"/>
+<button onclick="loginUser()">Login</button>
+<p>Don't have an account? <a href="#" onclick="switchPage('registerPage')">Register</a></p>
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

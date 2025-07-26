@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Healthee</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page" id="settingsPage" style="display: block;">
+<h2>⚙️ Settings</h2>
+<textarea readonly="">
+Healthee is your personalized wellness assistant. Track your habits. Improve your health.
+    </textarea>
+<input id="newUsername" placeholder="Change Username" type="text"/>
+<input id="newPassword" placeholder="Change Password" type="password"/>
+<button onclick="updateSettings()">Update</button>
+<button onclick="switchPage('mainPage')">⬅️ Back</button>
+<button onclick="logout()">🔓 Logout</button>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
