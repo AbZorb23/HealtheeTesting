@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Main | Healthee</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="form-container">
+    <h2>Health Tracker Input</h2>
+    <form id="healthForm">
+      <input type="number" placeholder="Sleep Hours" required />
+      <input type="number" placeholder="Water Intake (L)" required />
+      <input type="number" placeholder="Meals Per Day" required />
+      <input type="text" placeholder="Blood Pressure (Optional)" />
+      <select required>
+        <option value="">Physical Activity?</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+      <select required>
+        <option value="">Mood</option>
+        <option>Happy</option>
+        <option>Sad</option>
+        <option>Stressed</option>
+        <option>Okay</option>
+      </select>
+      <button type="submit">Submit</button>
+    </form>
+    <a href="settings.html"><button>Settings</button></a>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>
